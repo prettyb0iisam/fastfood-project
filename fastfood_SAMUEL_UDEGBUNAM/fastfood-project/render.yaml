@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: fastfood-project
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        value: mongodb+srv://samueludegbunam11_db_user:SamuelUdegbunam.14@cluster0.uqmxwir.mongodb.net/fastfood?retryWrites=true&w=majority&appName=Cluster0
+      - key: SESSION_SECRET
+        value: fastfood
+      - key: FRONTEND_URL
+        value: https://fastfood-project.onrender.com

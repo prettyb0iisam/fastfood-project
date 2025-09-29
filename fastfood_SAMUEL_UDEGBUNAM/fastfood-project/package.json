@@ -1,0 +1,21 @@
+{
+  "name": "fastfood-project",
+  "version": "1.0.0",
+  "description": "FastFood Project - Full Stack Application",
+  "main": "start.js",
+  "scripts": {
+    "start": "node start.js",
+    "dev": "cd backend && npm run dev",
+    "build": "cd backend && npm install",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": ["fastfood", "nodejs", "express", "mongodb"],
+  "author": "Samuel Udegbunam",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
