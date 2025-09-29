@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carrello</title>
+  <link rel="stylesheet" href="/pagine/cart/cart.css" />
+</head>
+<body>
+  <div class="page-header">
+    <h1 class="page-title">Carrello</h1>
+    <div class="header-buttons">
+      <button id="backToMealsBtn" class="btn-secondary">Visualizza i piatti</button>
+      <button id="profileBtn" class="btn-secondary">Profilo</button>
+      <button id="ordersBtn" class="btn-secondary">Ordini</button>
+      <button id="historyBtn" class="btn-secondary">Storico</button>
+      <button id="restaurantsBtn" class="btn-secondary">Ristoranti</button>
+    </div>
+  </div>
+  <div id="status" class="status"></div>
+
+  <div class="menu-container">
+    <div id="cart-list" class="grid-meals"></div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:0 16px 40px;display:flex;justify-content:flex-end;gap:12px;align-items:center;">
+    <div id="cart-total" style="font-weight:700;font-size:1.1rem;">Totale: €0.00</div>
+    <button id="cart-clear" class="btn-secondary">Svuota</button>
+    <button id="cart-checkout" class="btn-primary" disabled>Procedi all'ordine</button>
+  </div>
+
+  <div id="meal-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Chiudi" data-close="true">×</button>
+
+      <div class="modal-scroll">
+        <div class="modal-img-wrapper">
+          <img id="modal-img" alt="" />
+        </div>
+
+        <div class="modal-title-row">
+          <h3 id="modal-title"></h3>
+          <div class="modal-links">
+            <a id="modal-source" href="#" target="_blank" rel="noopener" class="source-icon hidden" title="Apri la ricetta originale">🔗</a>
+            <a id="modal-youtube" href="#" target="_blank" rel="noopener" class="youtube-icon" title="Guarda su YouTube" aria-label="Apri video YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="red">
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5v-7l6 3.5-6 3.5z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="modal-meta">
+          <span id="modal-category"></span>
+          <span class="dot">•</span>
+          <span id="modal-area"></span>
+        </div>
+
+        <p id="modal-desc"></p>
+        <div id="modal-tags" class="modal-tags"></div>
+
+        <section class="modal-section">
+          <h4>Istruzioni</h4>
+          <p id="modal-instructions"></p>
+        </section>
+
+        <section class="modal-section two-cols">
+          <div>
+            <h4>Ingredienti</h4>
+            <ul id="modal-ingredients"></ul>
+          </div>
+          <div>
+            <h4>Misure</h4>
+            <ul id="modal-measures"></ul>
+          </div>
+        </section>
+      </div>
+
+      <div class="modal-actions modal-actions--stack">
+        <div class="actions-default">
+          <p class="modal-hint">
+            Questo piatto è disponibile presso: <strong id="modal-restaurant"></strong>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="/pagine/cart/cart.js" defer></script>
+</body>
+</html>

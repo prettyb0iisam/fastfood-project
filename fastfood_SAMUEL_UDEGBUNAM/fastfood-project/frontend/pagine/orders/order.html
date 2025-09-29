@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordine Confermato - FastFood</title>
+    <link rel="stylesheet" href="/pagine/orders/order.css">
+</head>
+<body>
+    <div class="page-header">
+        <h1 class="page-title">Ordine confermato</h1>
+        <div class="header-actions">
+            <button id="backToMenu" class="btn-secondary">Torna al Menu</button>
+            <button id="profileBtn" class="btn-secondary">Profilo</button>
+            <button id="cartBtn" class="btn-secondary">Carrello</button>
+            <button id="ordersBtn" class="btn-secondary">Ordini</button>
+        </div>
+    </div>
+    <div id="status" class="status"></div>
+
+    <div class="menu-container">
+        <div id="restaurantsList" class="grid-meals">
+        </div>
+    </div>
+
+    <div style="max-width:1200px;margin:0 auto;padding:0 16px 40px;display:flex;justify-content:flex-end;gap:12px;align-items:center;">
+        <button id="confirmPickup" class="btn-primary" style="display: none;">Ritiro Confermato</button>
+    </div>
+
+    <script src="/pagine/orders/order.js"></script>
+</body>
+</html>

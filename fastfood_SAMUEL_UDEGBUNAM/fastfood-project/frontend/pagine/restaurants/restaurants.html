@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ristoranti Aperti</title>
+  <link rel="stylesheet" href="/pagine/restaurants/restaurants.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1 class="page-title">Ristoranti Aperti</h1>
+      <div class="header-actions">
+        <button id="profileBtn" class="btn-secondary">Profilo</button>
+        <button id="ordersBtn" class="btn-secondary">Ordini</button>
+        <button id="historyBtn" class="btn-secondary">Storico</button>
+        <button id="menuBtn" class="btn-secondary">Visualizza i piatti</button>
+        <button id="cartBtn" class="btn-secondary">Carrello</button>
+      </div>
+    </header>
+    <div class="search-container">
+      <div class="search-wrapper">
+        <input 
+          type="text" 
+          id="search-input" 
+          class="search-input" 
+          placeholder="Cerca un ristorante..."
+          autocomplete="off"
+        />
+      </div>
+    </div>
+    <main class="restaurants-content">
+      <div id="status" class="status"></div>
+      <div id="restaurants" class="restaurants-grid"></div>
+    </main>
+  </div>
+  <script src="/pagine/restaurants/restaurants.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrazione - FastFood</title>
+  <link rel="stylesheet" href="/pagine/register/register.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Che tipo di utente vuoi registrare?</h1>
+
+    <div class="user-selection">
+      <div id="box-cliente" class="user-box" onclick="selezionaTipo('cliente')">
+        <img src="https://cdn-icons-png.flaticon.com/512/456/456283.png" alt="Cliente">
+        <p>Cliente</p>
+      </div>
+      <div id="box-ristoratore" class="user-box" onclick="selezionaTipo('ristoratore')">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Ristoratore">
+        <p>Ristoratore</p>
+      </div>
+    </div>
+    <form id="form-cliente" class="form-card">
+      <input type="hidden" name="tipo" value="cliente">
+
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" required>
+
+      <label for="cognome">Cognome</label>
+      <input type="text" name="cognome" required>
+
+      <label for="email">Email</label>
+      <input type="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" name="password" required>
+
+      <label for="metodoPagamento">Metodo di pagamento</label>
+      <select name="metodoPagamento" required>
+        <option value="">-- Seleziona --</option>
+        <option value="Carta di credito">Carta di credito</option>
+        <option value="Carta di debito">Carta di debito</option>
+        <option value="Carta prepagata">Carta prepagata</option>
+        <option value="Contanti">Contanti</option>
+        <option value="Pagamento Digitale">Pagamento Digitale</option>
+      </select>
+      <div class="preferences-section">
+        <label class="preferences-toggle" onclick="togglePreferences()">
+          <span>Vuoi aggiungere le tue preferenze ai piatti?</span>
+          <span class="toggle-icon">▼</span>
+        </label>
+        <div id="preferences-container" class="preferences-container hidden">
+          <div class="preferences-loading">Caricamento preferenze...</div>
+          <div id="preferences-tags" class="preferences-tags"></div>
+        </div>
+      </div>
+      <button type="submit">Registrati come Cliente</button>
+      <div class="errore" id="errore-cliente"></div>
+    </form>
+    <form id="form-ristoratore" class="form-card">
+      <input type="hidden" name="tipo" value="ristoratore">
+
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" required>
+
+      <label for="email">Email</label>
+      <input type="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" name="password" required>
+
+      <label for="nomeRistorante">Nome Ristorante</label>
+      <input type="text" name="nomeRistorante" id="nomeRistorante" required>
+      
+      <div id="restaurantStatus" class="restaurant-status"></div>
+      
+      <div id="restaurantFields" class="restaurant-fields">
+        <label for="numeroTelefono">Numero di Telefono</label>
+        <input type="text" name="numeroTelefono" id="numeroTelefono" required>
+
+        <label for="partitaIVA">Partita IVA</label>
+        <input type="text" name="partitaIVA" id="partitaIVA" required>
+
+        <label for="indirizzoRistorante">Indirizzo Ristorante</label>
+        <input type="text" name="indirizzoRistorante" id="indirizzoRistorante" required>
+      </div>
+
+      <button type="submit">Registrati come Ristoratore</button>
+      <div class="errore" id="errore-ristoratore"></div>
+    </form>
+  </main>
+
+  <script src="/pagine/register/register.js"></script>
+</body>
+</html>

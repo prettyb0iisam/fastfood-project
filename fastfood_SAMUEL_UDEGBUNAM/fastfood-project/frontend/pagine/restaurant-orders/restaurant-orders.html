@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordini Attivi - FastFood</title>
+    <link rel="stylesheet" href="/pagine/restaurant-orders/restaurant-orders.css">
+</head>
+<body>
+<div class="page-content">
+    <h1>Ordini Attivi</h1>
+    <div class="nav-buttons">
+        <button id="viewHistory" class="btn-secondary">Storico</button>
+        <button id="viewMenu" class="btn-secondary">Visualizza Menu del Ristorante</button>
+        <button id="addDishes" class="btn-secondary">Aggiungi Piatti</button>
+        <button id="backToProfile" class="btn-secondary">Profilo</button>
+    </div>
+</div>
+
+<div id="status" class="status"></div>
+<div id="activeOrdersList" class="orders-list">
+    <div class="loading">Nessun Ordine Attivo</div>
+</div>
+
+<script src="/pagine/restaurant-orders/restaurant-orders.js"></script>
+</body>
+</html>

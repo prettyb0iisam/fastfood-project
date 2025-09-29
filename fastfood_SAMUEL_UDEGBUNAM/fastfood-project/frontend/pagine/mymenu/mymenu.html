@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Menu del Ristorante</title>
+  <link rel="stylesheet" href="/pagine/mymenu/mymenu.css">
+  <link rel="stylesheet" href="/pagine/mymenu/mymenu-modal.css">
+</head>
+<body>
+<div class="page-content">
+  <h1 id="restaurant-title"></h1>
+  <div class="nav-buttons">
+    <button id="profileBtn" class="btn-secondary">Profilo</button>
+    <button id="ordersBtn" class="btn-secondary">Ordini Attivi</button>
+    <button id="historyBtn" class="btn-secondary">Storico</button>
+    <button id="addDishesBtn" class="btn-secondary">Aggiungi Piatti</button>
+    <button id="createDishBtn" class="btn-secondary">Crea il tuo piatto</button>
+  </div>
+</div>
+
+<div id="status" class="status"></div>
+  <div id="menu-container" class="grid-meals"></div>
+
+  <div id="meal-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Chiudi" data-close="true">×</button>
+
+      <div class="modal-img-wrapper">
+        <img id="modal-img" alt="" />
+      </div>
+
+      <div class="modal-title-row">
+        <h3 id="modal-title"></h3>
+        <div class="modal-links" id="modal-source-wrap">
+          <a id="modal-source" href="#" target="_blank" rel="noopener"
+             class="source-icon hidden" title="Apri la ricetta originale">🔗</a>
+          <a id="modal-youtube" href="#" target="_blank" rel="noopener"
+             class="youtube-icon" title="Guarda su YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                 viewBox="0 0 24 24" fill="red">
+              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5v-7l6 3.5-6 3.5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="modal-meta">
+        <span id="modal-category"></span>
+        <span class="dot">•</span>
+        <span id="modal-area"></span>
+      </div>
+
+      <p id="modal-desc"></p>
+
+      <div id="modal-tags" class="modal-tags"></div>
+
+      <div id="modal-price" class="modal-price"></div>
+
+      <section class="modal-section">
+        <h4>Istruzioni</h4>
+        <p id="modal-instructions"></p>
+      </section>
+
+             <section class="modal-section two-cols">
+         <div>
+           <h4>Ingredienti</h4>
+           <ul id="modal-ingredients"></ul>
+         </div>
+         <div>
+           <h4>Misure</h4>
+           <ul id="modal-measures"></ul>
+         </div>
+       </section>
+
+       <div class="modal-actions-inline" id="owner-actions">
+         <button id="mmodal-remove" type="button" class="btn-danger">Rimuovi</button>
+         <button id="mmodal-edit" type="button" class="btn-secondary">Edit</button>
+       </div>
+
+       <div class="modal-actions modal-actions--stack hidden" id="customer-actions">
+         <div style="display:flex; gap:8px; justify-content:center; margin-bottom:8px;">
+           <button id="qty-minus" class="btn-secondary" type="button" aria-label="Diminuisci">−</button>
+           <input id="order-qty" type="number" min="1" value="1" style="width:80px; text-align:center;" />
+           <button id="qty-plus" class="btn-secondary" type="button" aria-label="Aumenta">+</button>
+         </div>
+         <button id="order-btn" class="btn-primary" type="button">Ordina</button>
+       </div>
+    </div>
+  </div>
+
+  <script src="/pagine/mymenu/mymenu.js" defer></script>
+  <script src="/pagine/mymenu/mymenu-edit.js" defer></script>
+</body>
+</html>

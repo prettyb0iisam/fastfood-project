@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Profilo Utente</title>
+  <link rel="stylesheet" href="/pagine/profile/profilo.css">
+</head>
+<body>
+  <main class="profilo-container">
+    <div class="profilo-card">
+      <button id="editBtn" class="btn-edit">Edit</button>
+      <button id="logoutBtn" class="btn-ghost logout-top" style="margin-right:10px;">Logout</button>
+      <h1>Il tuo profilo</h1>
+
+      <div id="dati-utente" class="profilo-info"></div>
+
+      <div class="profilo-actions" style="margin-top: 2rem;">
+         <div id="cliente-actions" style="display: none;">
+           <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+             <button id="deleteBtn" class="btn-danger">Elimina Account</button>
+             <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: -1rem;">
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                  <button id="viewAllMealsBtn" class="btn-secondary">Visualizza i Piatti</button>
+                  <button id="ordersBtn" class="btn-secondary">Ordini</button>
+                  <button id="ordersHistoryBtn" class="btn-secondary">Storico</button>
+                </div>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                  <button id="viewOpenRestaurantsBtn" class="btn-secondary">Visualizza i Ristoranti Aperti</button>
+                  <button id="cartBtn" class="btn-secondary">Carrello</button>
+                </div>
+             </div>
+           </div>
+         </div>
+         <div id="ristoratore-actions" style="display: none;">
+           <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+             <button id="deleteBtnRistoratore" class="btn-danger">Elimina Account</button>
+             <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: -1rem;">
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                  <button id="viewMenuBtn" class="btn-secondary" style="display:none;">Visualizza Menu del Ristorante</button>
+                  <button id="restaurantOrdersBtn" class="btn-secondary" style="display:none;">Ordini Attivi</button>
+                </div>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                  <button id="addMealsBtn" class="btn-secondary" style="display:none;">Aggiungi Piatti</button>
+                  <button id="restaurantHistoryBtn" class="btn-secondary" style="display:none;">Storico</button>
+                </div>
+             </div>
+           </div>
+         </div>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <button id="confirmBtn" class="btn-primary" style="display:none;">Conferma</button>
+        </div>
+      </div>
+      </div>
+
+      <p id="errore" class="errore"></p>
+    </div>
+  </main>
+  <script src="/pagine/profile/profilo.js"></script>
+</body>
+</html>

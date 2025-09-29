@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crea il tuo piatto</title>
+  <link rel="stylesheet" href="/pagine/newmeal/newmeal.css">
+  <link rel="stylesheet" href="/pagine/newmeal/mymenu-modal.css">
+</head>
+<body>
+
+  <div class="page-content">
+    <h1>Crea il tuo piatto</h1>
+    <div class="nav-buttons">
+      <button id="profileBtn" class="btn-secondary">Profilo</button>
+      <button id="viewMenuBtn" class="btn-secondary">Visualizza Menu</button>
+      <button id="addMealsBtn" class="btn-secondary">Aggiungi Piatti</button>
+      <button id="historyBtn" class="btn-secondary">Storico</button>
+      <button id="ordersBtn" class="btn-secondary">Ordini</button>
+    </div>
+  </div>
+
+  <div id="status" class="status"></div>
+
+  <div class="newmeal-container">
+
+    <div class="newmeal-card">
+      <div class="newmeal-media">
+        <div class="img-frame" id="img-frame">
+          <img id="nm-preview" alt="Anteprima immagine" class="hidden" />
+          <div id="nm-placeholder" class="img-placeholder">Nessuna immagine</div>
+        </div>
+        <div class="newmeal-bottom-fields">
+          <div class="field-group">
+            <label for="nm-youtube">YouTube</label>
+            <input id="nm-youtube" type="text" />
+            
+            <label for="nm-instructions">Istruzioni</label>
+            <textarea id="nm-instructions" rows="5"></textarea>
+            
+            <label for="nm-tags">Tags (vai a capo per ogni tag)</label>
+            <textarea id="nm-tags" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <form id="newmeal-form" class="newmeal-form form-grid">
+        <div class="image-upload-section">
+          <label for="nm-image">Immagine (opzionale)</label>
+          <input id="nm-image" type="file" accept="image/*" />
+        </div>
+
+        <label for="nm-title">Titolo</label>
+        <input id="nm-title" type="text" required />
+
+        <label for="nm-category">Categoria</label>
+        <input id="nm-category" type="text" />
+
+        <label for="nm-area">Origini</label>
+        <input id="nm-area" type="text" />
+
+        <label for="nm-price">Prezzo (€)</label>
+        <input id="nm-price" type="number" step="0.01" min="0" required />
+
+        <label for="nm-source">Link</label>
+        <input id="nm-source" type="url" />
+
+        <label for="nm-ings">Ingredienti (vai a capo per ogni ingrediente)</label>
+        <textarea id="nm-ings" rows="5"></textarea>
+
+        <label for="nm-meas">Misure (vai a capo per ogni misura)</label>
+        <textarea id="nm-meas" rows="5"></textarea>
+
+        <div class="form-actions">
+          <button id="nm-cancel" type="button" class="btn-secondary">Annulla</button>
+          <button id="nm-save" type="submit" class="btn-primary">Conferma</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/pagine/newmeal/newmeal.js" defer></script>
+</body>
+</html>
