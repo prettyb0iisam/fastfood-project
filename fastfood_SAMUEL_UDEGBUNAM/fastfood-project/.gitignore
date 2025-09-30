@@ -1,0 +1,31 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Build/output
+dist/
+build/
+coverage/
+.tmp/
+.cache/
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# App specific
+backend/dump/
+mongodb-database-tools-windows-*/
+frontend/node_modules/
+backend/node_modules/
+
+
