@@ -9,8 +9,8 @@ services:
       - key: NODE_ENV
         value: production
       - key: MONGO_URI
-        value: mongodb+srv://samueludegbunam11_db_user:SamuelUdegbunam.14@cluster0.uqmxwir.mongodb.net/fastfood?retryWrites=true&w=majority&appName=Cluster0
+        sync: false
       - key: SESSION_SECRET
-        value: fastfood
+        sync: false
       - key: FRONTEND_URL
         value: https://fastfood-project.onrender.com
