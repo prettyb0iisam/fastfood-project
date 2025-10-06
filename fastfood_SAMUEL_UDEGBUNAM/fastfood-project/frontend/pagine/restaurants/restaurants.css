@@ -79,6 +79,11 @@ body {
   margin: 0 auto;
 }
 
+/* Forza 2 colonne su desktop in caso di override esterni */
+.restaurants-content > #restaurants.restaurants-grid {
+  grid-template-columns: 1fr 1fr !important;
+}
+
 .btn-secondary {
   background-color: white;
   color: #333;
