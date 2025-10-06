@@ -34,6 +34,14 @@
       <div id="restaurants" class="restaurants-grid"></div>
     </main>
   </div>
+  <script>
+    // Base URL detection: in Live Server, serve from /frontend; ensure links work
+    (function(){
+      var base = document.createElement('base');
+      base.href = location.pathname.startsWith('/pagine/') ? '/' : '/';
+      document.head.appendChild(base);
+    })();
+  </script>
   <script src="/pagine/restaurants/restaurants.js" defer></script>
 </body>
 </html>
