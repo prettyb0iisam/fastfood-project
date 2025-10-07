@@ -80,8 +80,11 @@ body {
 }
 
 /* Forza 2 colonne su desktop in caso di override esterni */
-.restaurants-content > #restaurants.restaurants-grid {
-  grid-template-columns: 1fr 1fr !important;
+/* Mantieni 2 colonne solo su schermi larghi */
+@media (min-width: 992px) {
+  .restaurants-content > #restaurants.restaurants-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .btn-secondary {
@@ -297,7 +300,11 @@ body {
   
   .restaurant-stats {
     order: -1;
+    margin-top: 0; /* rimuove il margine negativo che causava sovrapposizioni */
   }
+
+  .restaurant-title { font-size: 1.25rem; }
+  .stat-label { min-width: 100px; }
 }
 
 .wait-time {
