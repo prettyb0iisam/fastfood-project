@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } catch (error) {
       console.error('Errore nel recupero del profilo:', error);
-      // Fallback
       window.location.href = '/storico';
     }
   });
