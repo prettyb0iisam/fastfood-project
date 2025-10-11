@@ -186,6 +186,20 @@ async function caricaProfilo() {
   utenteCorrente = await res.json();
   console.log('Dati utente caricati:', utenteCorrente);
   
+  // Check if user is using demo account
+  const isDemoAccount = utenteCorrente?.email === 'demo@cliente.it' || utenteCorrente?.email === 'demo@ristorante.it';
+  const demoBanner = document.getElementById('demoBanner');
+  
+  if (isDemoAccount) {
+    demoBanner.classList.remove('hidden');
+    // Hide the banner after 4 seconds
+    setTimeout(() => {
+      demoBanner.classList.add('hidden');
+    }, 4000);
+  } else {
+    demoBanner.classList.add('hidden');
+  }
+  
   if (utenteCorrente?.tipo === 'ristoratore' && utenteCorrente.nomeRistorante) {
     try {
       const creatorRes = await fetch(`/api/check-restaurant-creator/${encodeURIComponent(utenteCorrente.nomeRistorante)}`, {
@@ -231,6 +245,23 @@ async function caricaProfilo() {
     
     const deleteBtnRistoratore = document.getElementById('deleteBtnRistoratore');
     deleteBtnRistoratore.onclick = async () => {
+      // Check if it's a demo account
+      const isDemoAccount = utenteCorrente?.email === 'demo@cliente.it' || utenteCorrente?.email === 'demo@ristorante.it';
+      
+      if (isDemoAccount) {
+        // Show demo delete popup
+        const demoDeletePopup = document.getElementById('demoDeletePopup');
+        demoDeletePopup.classList.remove('hidden');
+        
+        // Hide popup after 3 seconds
+        setTimeout(() => {
+          demoDeletePopup.classList.add('hidden');
+        }, 3000);
+        
+        return;
+      }
+      
+      // Normal delete flow for non-demo accounts
       const prima = confirm('⚠️ Eliminare definitivamente il profilo?');
       if (!prima) return;
       const seconda = confirm('Confermo: elimina definitivamente.');
@@ -319,6 +350,23 @@ document.getElementById('confirmBtn').addEventListener('click', async () => {
 });
 
 document.getElementById('deleteBtn').addEventListener('click', async () => {
+  // Check if it's a demo account
+  const isDemoAccount = utenteCorrente?.email === 'demo@cliente.it' || utenteCorrente?.email === 'demo@ristorante.it';
+  
+  if (isDemoAccount) {
+    // Show demo delete popup
+    const demoDeletePopup = document.getElementById('demoDeletePopup');
+    demoDeletePopup.classList.remove('hidden');
+    
+    // Hide popup after 3 seconds
+    setTimeout(() => {
+      demoDeletePopup.classList.add('hidden');
+    }, 3000);
+    
+    return;
+  }
+  
+  // Normal delete flow for non-demo accounts
   const prima = confirm('Eliminare definitivamente il profilo?');
   if (!prima) return;
   const seconda = confirm('Confermo: elimina definitivamente.');

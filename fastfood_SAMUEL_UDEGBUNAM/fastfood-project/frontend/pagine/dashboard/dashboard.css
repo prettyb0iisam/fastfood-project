@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  margin-top: 0rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.user-selection {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-box {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-align: center;
+  min-width: 200px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-box:hover {
+  transform: translateY(-5px);
+}
+
+.user-box img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+}
+
+.user-box p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-subtitle {
+  margin: 0.5rem 0 0 0 !important;
+  font-weight: normal !important;
+  font-size: 0.9rem;
+  color: #666 !important;
+}
+
+.menu-preview {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.menu-box {
+  min-width: 300px;
+  min-height: 200px;
+}
+
+.register-link {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Popup Styles */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
+
+.popup-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.2;
+}
+
+.popup-content p {
+  margin: 0 0 20px 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.popup-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.popup-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 120px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+}
+
+.popup-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cliente-card:hover {
+  border-color: #28a745;
+}
+
+.ristoratore-card:hover {
+  border-color: #007BFF;
+}
+
+.popup-card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.popup-card p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.popup-alternative {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.popup-alternative p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.menu-link {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu-link:hover {
+  text-decoration: underline;
+}
+
+
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; line-height: 1.2; }
+
+  .user-selection { flex-direction: row; flex-wrap: wrap; gap: 12px; width: 100%; justify-content: center; }
+
+  .user-box { padding: 1rem; min-width: 0; width: calc(50% - 12px); max-width: 220px; }
+
+  .user-box img { width: 56px; height: 56px; margin-bottom: .75rem; }
+
+  .menu-box { width: 100%; max-width: 460px; min-width: 0; min-height: 150px; }
+
+  .popup-cards { 
+    flex-direction: column; 
+    gap: 12px; 
+    align-items: center;
+  }
+
+  .popup-card { 
+    min-width: 200px; 
+    min-height: 100px; 
+    padding: 15px;
+  }
+
+  .popup-card img { 
+    width: 40px; 
+    height: 40px; 
+    margin-bottom: 8px; 
+  }
+
+  .popup-content h3 {
+    font-size: 1.1rem;
+  }
+}
+
+

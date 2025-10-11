@@ -22,10 +22,18 @@ body {
   max-width: 400px;
 }
 
-.login-card h1 {
+.login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 30px;
+}
+
+.login-card h1 {
+  margin: 0 0 15px 0;
   font-size: 2rem;
 }
+
 
 .login-card input {
   width: 100%;

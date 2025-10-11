@@ -14,7 +14,7 @@ function nameRegex(s) {
   return new RegExp(`^${escaped}$`, 'i');
 }
 
-//CARICAMENTO IMMAGINI -> Cloudinary
+//CARICAMENTO IMMAGINI
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
@@ -49,7 +49,7 @@ async function getOrCreateRestaurantByName(user) {
   let r = await Restaurant.findOne({ nomeRistorante: nameRegex(user.nomeRistorante) });
   if (!r) {
     r = await Restaurant.create({
-      owners: [user._id],             // <-- usa "owners" (array)
+      owners: [user._id],
       nomeRistorante: user.nomeRistorante,
       menu: []
     });
@@ -201,8 +201,7 @@ router.post('/', upload.single('image'), async (req, res) => {
 
     const r = await getOrCreateRestaurantByName(req.user);
 
-    //piatto esistente
-    if (!custom) {
+      if (!custom) {
       if (!mealId) return res.status(400).json({ msg: 'mealId mancante' });
       const meal = await Meal.findById(mealId);
       if (!meal) return res.status(404).json({ msg: 'Meal non trovato' });
@@ -242,7 +241,6 @@ router.post('/', upload.single('image'), async (req, res) => {
       return res.status(201).json(r.menu);
     }
 
-    //piatto custom
     if (!nome || typeof prezzo === 'undefined') {
       return res.status(400).json({ msg: 'Nome e prezzo sono obbligatori' });
     }

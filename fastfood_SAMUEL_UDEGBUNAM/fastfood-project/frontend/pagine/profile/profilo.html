@@ -7,6 +7,11 @@
 </head>
 <body>
   <main class="profilo-container">
+    <!-- Demo Account Card -->
+    <div id="demoBanner" class="demo-card hidden">
+      <span class="demo-text">Stai navigando con un Account Demo</span>
+    </div>
+    
     <div class="profilo-card">
       <button id="editBtn" class="btn-edit">Edit</button>
       <button id="logoutBtn" class="btn-ghost logout-top" style="margin-right:10px;">Logout</button>
@@ -55,6 +60,14 @@
       <p id="errore" class="errore"></p>
     </div>
   </main>
+
+  <!-- Popup per eliminazione account demo -->
+  <div id="demoDeletePopup" class="demo-delete-popup hidden">
+    <div class="demo-delete-content">
+      <h3>Impossibile eliminare l'account di prova</h3>
+    </div>
+  </div>
+
   <script src="/pagine/profile/profilo.js"></script>
 </body>
 </html>

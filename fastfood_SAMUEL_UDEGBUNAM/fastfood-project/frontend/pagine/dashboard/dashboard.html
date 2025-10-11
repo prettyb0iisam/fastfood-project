@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastFood - Dashboard</title>
+  <link rel="stylesheet" href="/pagine/dashboard/dashboard.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Sei già registrato? Che tipo di utente sei?</h1>
+
+    <div class="user-selection">
+      <div class="user-box" onclick="location.href='/login'">
+        <img src="https://cdn-icons-png.flaticon.com/512/456/456283.png" alt="Cliente">
+        <p>Cliente</p>
+      </div>
+      <div class="user-box" onclick="location.href='/login'">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Ristoratore">
+        <p>Ristoratore</p>
+      </div>
+    </div>
+
+    <div class="menu-preview">
+      <div class="user-box menu-box" id="demoAccessBtn">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046747.png" alt="Menu">
+        <p>Prova FastFood senza registrarti</p>
+      </div>
+    </div>
+
+    <div class="register-link">
+      <p>Prima volta qui? <a href="/register">Registrati</a></p>
+    </div>
+  </main>
+
+  <!-- Popup per accesso demo -->
+  <div id="demoPopup" class="popup-overlay">
+    <div class="popup-content">
+      <h3>Prova FastFood con un account demo</h3>
+      <p>Accedi subito alla versione demo di FastFood selezionando il tipo di utente:</p>
+      <div class="popup-cards">
+        <div id="demoClienteBtn" class="popup-card cliente-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/456/456283.png" alt="Cliente">
+          <p>Cliente</p>
+        </div>
+        <div id="demoRistoratoreBtn" class="popup-card ristoratore-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Ristoratore">
+          <p>Ristoratore</p>
+        </div>
+      </div>
+      <div class="popup-alternative">
+        <p>oppure <a href="/noregister-menu" class="menu-link">visualizza il menu senza registrarti</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/pagine/dashboard/dashboard.js"></script>
+</body>
+</html>
+
+

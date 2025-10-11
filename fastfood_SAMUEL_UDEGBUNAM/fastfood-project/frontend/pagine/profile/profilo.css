@@ -5,9 +5,75 @@ body {
   color: #333;
 }
 
-.profilo-container {
+/* Demo Card Styles */
+.demo-card {
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 15px;
+  max-width: 300px;
+  width: auto;
+  transition: all 0.3s ease-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.demo-card.hidden {
+  opacity: 0;
+  transform: translateY(-5px);
+  pointer-events: none;
+}
+
+.demo-text {
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Demo Delete Popup Styles */
+.demo-delete-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
   display: flex;
   justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-out;
+  opacity: 1;
+}
+
+.demo-delete-popup.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.demo-delete-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
+
+.demo-delete-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.profilo-container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
   padding: 20px;

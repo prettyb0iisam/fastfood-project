@@ -18,7 +18,8 @@ const pages = {
   'restaurant-orders': 'restaurant-orders/restaurant-orders.html',
   'restaurant-history': 'restaurant-history/restaurant-history.html',
   'storico': 'storico/storico.html',
-  'all-meals': 'all-meals/all-meals.html'
+  'all-meals': 'all-meals/all-meals.html',
+  'dashboard': 'dashboard/dashboard.html'
 };
 
 //ROTTE DINAMICHE PER TUTTE LE PAGINE
