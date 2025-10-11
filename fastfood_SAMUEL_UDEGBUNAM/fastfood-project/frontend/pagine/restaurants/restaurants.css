@@ -79,8 +79,6 @@ body {
   margin: 0 auto;
 }
 
-/* Forza 2 colonne su desktop in caso di override esterni */
-/* Mantieni 2 colonne solo su schermi larghi */
 @media (min-width: 992px) {
   .restaurants-content > #restaurants.restaurants-grid {
     grid-template-columns: 1fr 1fr;
@@ -300,7 +298,7 @@ body {
   
   .restaurant-stats {
     order: -1;
-    margin-top: 0; /* rimuove il margine negativo che causava sovrapposizioni */
+    margin-top: 0;
   }
 
   .restaurant-title { font-size: 1.25rem; }
