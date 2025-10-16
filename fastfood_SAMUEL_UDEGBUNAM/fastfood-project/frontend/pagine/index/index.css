@@ -21,6 +21,9 @@ body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 .social-link { display: inline-flex; width: 36px; height: 36px; }
 .social-link img { width: 100%; height: 100%; object-fit: contain; }
 
+.copyright { text-align: center; margin-top: 100px; padding-bottom: 20px; }
+.copyright p { margin: 0; color: #888; font-size: 0.9rem; }
+
 @media (max-width: 600px) {
   .hero h1 { font-size: 1.6rem; }
   .title-row { gap: 10px; position: relative; flex-direction: column; align-items: center; }
